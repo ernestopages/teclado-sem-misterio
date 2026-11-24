@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teclado Sem Mistério: entenda o que você toca</title>
+<meta name="description" content="Guia visual de teoria para teclado: entenda o que você toca, sem partitura e sem decorar acordes. Feito para teclado de 61 teclas.">
+<meta name="theme-color" content="#120f24">
+<link rel="preload" as="image" href="img/hero-mockup.jpg" fetchpriority="high">
+<!-- PIXEL_META_AQUI -->
+<!-- PIXEL_INDECFY_AQUI -->
+<style>
+:root{--bg:#120f24;--bg2:#1b1736;--card:#231e45;--tx:#f4f2ff;--mu:#b9b4d6;--y:#ffd23f;--p:#ff5c8a;--g:#5ee39a;--c:#6ad1ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--tx);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+img,svg{display:block;max-width:100%;height:auto}
+.w{max-width:560px;margin:0 auto;padding:0 18px}
+section{padding:44px 0;text-align:center}
+section.alt{background:var(--bg2)}
+h1{font-size:29px;line-height:1.2;font-weight:900;letter-spacing:-.3px}
+h2{font-size:25px;line-height:1.22;font-weight:850;margin-bottom:14px}
+h3{font-size:19px;line-height:1.3}
+p{margin:0 0 12px}
+.y{color:var(--y)}.p{color:var(--p)}.g{color:var(--g)}.c{color:var(--c)}
+.kick{font-size:13px;font-weight:800;letter-spacing:1.5px;color:var(--c);text-transform:uppercase;margin-bottom:10px}
+.top{background:linear-gradient(90deg,#ff3d6e,#ff8a3d);color:#fff;font-weight:800;font-size:14px;text-align:center;padding:9px 10px;line-height:1.3}
+.top small{display:block;font-weight:600;font-size:12px;opacity:.95}
+.hero{padding-top:26px}
+.sub{color:var(--mu);font-size:18px;margin:12px 0 16px}
+.checks{list-style:none;text-align:left;display:inline-block;margin:0 auto 16px}
+.checks li{padding-left:28px;position:relative;margin:7px 0}
+.checks li:before{content:"✓";position:absolute;left:0;top:0;color:var(--g);font-weight:900}
+.hero img{border-radius:16px;margin:4px auto 14px;width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0 18px}
+.chips span{background:var(--card);border:1px solid #3a3366;border-radius:99px;padding:6px 12px;font-size:14px}
+.btn-buy{display:block;background:linear-gradient(180deg,#5ef0a3,#22c46f);color:#06240f;font-weight:900;font-size:18px;text-decoration:none;padding:17px 14px;border-radius:14px;box-shadow:0 6px 0 #138a4c;margin:16px 0 8px;letter-spacing:.3px}
+.btn-buy:active{transform:translateY(3px);box-shadow:0 3px 0 #138a4c}
+.mini{font-size:13px;color:var(--mu)}
+.cards{display:grid;gap:12px;margin-top:8px}
+.card{background:var(--card);border-radius:16px;padding:18px;text-align:center}
+.card b{display:block;font-size:34px;color:var(--y);line-height:1.1}
+.card h3{margin:4px 0}
+.card p{color:var(--mu);font-size:15px;margin:0}
+.vs{display:grid;gap:12px;margin:18px 0}
+.vs .card{text-align:left}
+.vs .lbl{font-weight:900;font-size:14px;letter-spacing:1px;margin-bottom:8px;display:block}
+.kb{width:100%;margin:6px 0 8px}
+.tbl{list-style:none;text-align:left;margin-top:12px}
+.tbl li{background:var(--card);border-radius:12px;padding:12px 14px;margin:8px 0;font-size:15px}
+.tbl .x{color:var(--p);font-weight:800}.tbl .v{color:var(--g);font-weight:800}
+blockquote{border-left:4px solid var(--y);background:var(--card);border-radius:10px;padding:14px 16px;text-align:left;font-style:italic;margin-top:16px}
+.steps{display:grid;gap:12px;text-align:left}
+.step{background:var(--card);border-radius:16px;padding:16px}
+.step .n{color:var(--y);font-weight:900;font-size:22px}
+.offer{background:linear-gradient(180deg,#2a2353,#1d1840);border:2px solid var(--y);border-radius:20px;padding:20px 16px;margin-top:8px}
+.offer img{border-radius:14px;margin:6px auto 12px;width:100%}
+.pack{list-style:none;text-align:left}
+.pack li{padding:9px 0 9px 28px;border-bottom:1px solid #3a3366;position:relative}
+.pack li:before{content:"✓";position:absolute;left:2px;color:var(--g);font-weight:900}
+.pack b{display:block}.pack span{color:var(--mu);font-size:14px}
+.price{margin:16px 0 0}
+.price s{color:var(--mu);font-size:17px;display:block}
+.price b{font-size:44px;color:var(--y);font-weight:900;line-height:1.1}
+.price small{display:block;color:var(--mu);font-size:14px}
+.trust{list-style:none;font-size:14px;color:var(--mu);margin-top:6px}
+.trust li{margin:3px 0}
+.trust li:before{content:"• ";color:var(--g)}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px;text-align:left}
+.cmp th,.cmp td{padding:10px 8px;border-bottom:1px solid #3a3366;vertical-align:top}
+.cmp th{font-size:13px}
+.cmp td:first-child{color:var(--mu)}
+.cmp td:last-child{color:var(--g);font-weight:700}
+.parte{color:var(--y);text-align:left;margin:20px 0 6px;font-size:17px}
+details{background:var(--card);border-radius:12px;margin:8px 0;text-align:left}
+summary{cursor:pointer;padding:14px 40px 14px 14px;font-weight:700;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:14px;top:10px;font-size:22px;color:var(--y)}
+details[open] summary:after{content:"−"}
+details p{padding:0 14px 14px;color:var(--mu);font-size:15px;margin:0}
+.mn{color:var(--c);margin-right:8px}
+.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 12px;-webkit-overflow-scrolling:touch}
+.slide{flex:0 0 78%;scroll-snap-align:center}
+.slide img{border-radius:12px}
+figcaption{font-size:14px;color:var(--mu);margin-top:6px}
+.bonus{display:grid;grid-template-columns:110px 1fr;gap:12px;background:var(--card);border-radius:16px;padding:12px;margin:10px 0;text-align:left;align-items:center}
+.bonus img{border-radius:10px}
+.bonus h3{font-size:17px;margin:2px 0 4px}
+.bonus p{font-size:14px;color:var(--mu);margin:0}
+.tag{font-size:12px;font-weight:800;color:var(--y);letter-spacing:1px;text-transform:uppercase}
+.church{text-align:left}
+.church li{margin:8px 0 8px 20px}
+.tr{display:grid;gap:8px;text-align:left}
+.tr div{background:var(--card);border-radius:12px;padding:12px 14px;font-size:15px}
+.tr s{color:var(--p);text-decoration:none}
+.tr b{color:var(--g)}
+.guar{display:flex;gap:14px;align-items:center;background:var(--card);border-radius:16px;padding:16px;text-align:left}
+.seal{flex:0 0 76px;height:76px;border-radius:50%;border:3px dashed var(--y);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--y);text-align:center;line-height:1.05;font-size:14px}
+footer{background:#0b0918;color:var(--mu);font-size:13px;padding:28px 0 40px;text-align:center}
+footer details{background:#16122c;font-size:13px}
+footer summary{font-weight:600}
+footer details p{font-size:13px;padding-top:4px}
+footer a{color:var(--c)}
+@media(min-width:700px){h1{font-size:36px}h2{font-size:30px}.cards{grid-template-columns:repeat(3,1fr)}.vs{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="top">OFERTA DE BLACK FRIDAY<small>Acesso imediato por e-mail · Guia + 4 bônus · Pagamento seguro</small></div>
+
+<section class="hero"><div class="w">
+<p class="kick">Teoria musical para quem toca teclado sozinho</p>
+<h1>Você toca há anos e ainda <span class="y">não entende o que toca</span>? Não é falta de dom, é <span class="g">falta de mapa</span>.</h1>
+<p class="sub">Entenda o teclado de verdade, <span class="y">sem partitura</span>, sem conservatório e <span class="y">sem decorar acordes</span>. O guia visual que transforma o teclado de confuso em óbvio.</p>
+<ul class="checks">
+<li>Descubra o próximo acorde em vez de chutar</li>
+<li>Mude de tom no louvor sem travar</li>
+<li>Monte seus próprios acordes e progressões</li>
+<li>Dê o primeiro passo para tocar de ouvido</li>
+</ul>
+<picture><img src="img/hero-mockup.jpg" width="800" height="1000" alt="Guia Teclado Sem Mistério no celular, tablet e impresso" class="" fetchpriority="high" decoding="async"></picture>
+<div class="chips"><span>📖 cerca de 60 páginas</span><span>⚡ recebe hoje</span><span>📱 celular, tablet ou PC</span><span>🎹 teclado de 61 teclas</span></div>
+<a id="btn-checkout" class="btn-buy" href="LINK_DO_CHECKOUT">QUERO ENTENDER O TECLADO</a>
+<p class="mini">De R$ 147,00 por R$ 29,90 · pagamento único · garantia de 7 dias</p>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>Três coisas <span class="y">claras</span> antes de começar</h2>
+<div class="cards">
+<div class="card"><b>0</b><h3>teoria prévia</h3><p>Você começa do zero, no nome de cada tecla.</p></div>
+<div class="card"><b>∞</b><h3>sem vencimento</h3><p>É seu para sempre. Sem assinatura, sem bloqueio.</p></div>
+<div class="card"><b>44</b><h3>exercícios</h3><p>Com gabarito, para saber se você está fazendo certo.</p></div>
+</div>
+</div></section>
+
+<section><div class="w">
+<p class="kick">A verdade incômoda</p>
+<h2>Você toca sempre na <span class="p">mesma região</span> do teclado</h2>
+<p>Você sabe tocar. O que você não sabe é <b>por que</b> funciona o que você toca. Esse é o muro.</p>
+<div class="vs">
+<div class="card"><span class="lbl p">HOJE</span><svg viewBox="0 0 281 72" class="kb" aria-hidden="true"><rect x="0.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="20.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="40.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="60.5" y=".5" width="19" height="70" rx="2" fill="#ff6b8b" stroke="#333"/><rect x="80.5" y=".5" width="19" height="70" rx="2" fill="#ff6b8b" stroke="#333"/><rect x="100.5" y=".5" width="19" height="70" rx="2" fill="#ff6b8b" stroke="#333"/><rect x="120.5" y=".5" width="19" height="70" rx="2" fill="#ff6b8b" stroke="#333"/><rect x="140.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="160.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="180.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="200.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="220.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="240.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="260.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="13" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="33" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="73" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="93" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="113" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="153" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="173" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="213" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="233" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="253" y=".5" width="13" height="43" rx="1.5" fill="#111"/></svg><p class="mini">As mesmas 4 posições, sempre no mesmo lugar.</p></div>
+<div class="card"><span class="lbl g">DEPOIS</span><svg viewBox="0 0 281 72" class="kb" aria-hidden="true"><rect x="0.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="20.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="40.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="60.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="80.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="100.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="120.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="140.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="160.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="180.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="200.5" y=".5" width="19" height="70" rx="2" fill="#fff" stroke="#333"/><rect x="220.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="240.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="260.5" y=".5" width="19" height="70" rx="2" fill="#7ee0a1" stroke="#333"/><rect x="13" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="33" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="73" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="93" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="113" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="153" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="173" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="213" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="233" y=".5" width="13" height="43" rx="1.5" fill="#111"/><rect x="253" y=".5" width="13" height="43" rx="1.5" fill="#111"/></svg><p class="mini">O teclado inteiro vira um mapa que você enxerga.</p></div>
+</div>
+<ul class="tbl">
+<li><span class="x">✗</span> Trava quando o ministro pede outro tom<br><span class="v">✓</span> Muda de tom em segundos, usando os graus</li>
+<li><span class="x">✗</span> Empilha acordes até "soar certo"<br><span class="v">✓</span> Escolhe cada acorde de propósito</li>
+<li><span class="x">✗</span> Se perde quando falam de campo harmônico<br><span class="v">✓</span> Fala a língua da música</li>
+<li><span class="x">✗</span> Toca sempre os mesmos quatro acordes<br><span class="v">✓</span> Usa o teclado inteiro</li>
+</ul>
+</div></section>
+
+<section class="alt"><div class="w">
+<p class="kick">Leia isso antes de se culpar</p>
+<h2>A teoria não era difícil. <span class="y">As explicações é que eram ruins.</span></h2>
+<p>A maioria do material foi escrita por quem estudou em conservatório, para quem lê partitura. Muito termo em italiano, pentagrama, tradução mal feita.</p>
+<div class="vs">
+<div class="card"><span class="lbl p">O QUE TE DERAM</span><p>Partitura, termos em italiano, listas para decorar, explicação traduzida que ninguém entende.</p></div>
+<div class="card"><span class="lbl g">O QUE VOCÊ PRECISAVA</span><p>Seu instrumento desenhado, cada grau na tecla exata, cifra brasileira e diagramas coloridos.</p></div>
+</div>
+<blockquote>A teoria faz sentido quando você para de tentar decorar e começa a <span class="y">enxergar ela desenhada nas teclas</span>.</blockquote>
+</div></section>
+
+<section><div class="w">
+<p class="kick">O método</p>
+<h2>Sistema <span class="c">visual</span> do teclado em <span class="y">3 passos</span></h2>
+<div class="steps">
+<div class="step"><span class="n">01</span><h3>Ver antes de ler</h3><p>Cada ideia aparece desenhada no teclado, em cores, com a nota nos dois jeitos: Dó (C).</p></div>
+<div class="step"><span class="n">02</span><h3>Aplicar na mesma página</h3><p>Você leu, já coloca a mão no teclado e toca. Nada de teoria solta.</p></div>
+<div class="step"><span class="n">03</span><h3>Conferir que entendeu</h3><p>44 exercícios com gabarito. Você sabe na hora se acertou.</p></div>
+</div>
+<a class="btn-buy" href="LINK_DO_CHECKOUT">QUERO ENTENDER O TECLADO</a>
+</div></section>
+
+<section class="alt" id="oferta"><div class="w">
+<h2>Tudo que você recebe <span class="y">hoje</span></h2>
+<div class="offer">
+<p class="kick">O PACOTE COMPLETO</p>
+<picture><img src="img/pack-completo.jpg" width="800" height="800" alt="Pacote completo do Teclado Sem Mistério" class="" loading="lazy" decoding="async"></picture>
+<ul class="pack">
+<li><b>Guia Teclado Sem Mistério</b><span>cerca de 60 páginas, 11 módulos</span></li>
+<li><b>Gabarito completo</b><span>44 exercícios resolvidos</span></li>
+<li><b>Caderno de exercícios</b><span>imprimível</span></li>
+<li><b>Etiquetas para as teclas</b><span>imprimir, recortar e colar</span></li>
+<li><b>Plano de prática de 90 dias</b><span>cerca de 12 min por dia</span></li>
+<li><b>Folhas de consulta</b><span>escalas, campo harmônico, círculo de quintas, acordes</span></li>
+</ul>
+<div class="price" data-value="29.90" data-currency="BRL"><s>de R$ 147,00</s> por <b>R$ 29,90</b><small>pagamento único, no Pix ou no cartão</small></div>
+<a class="btn-buy" href="LINK_DO_CHECKOUT">QUERO ENTENDER O TECLADO</a>
+<ul class="trust"><li>Acesso imediato por e-mail</li><li>Acesso para sempre, sem assinatura</li><li>Garantia incondicional de 7 dias</li><li>Pix ou cartão, pagamento seguro</li></ul>
+</div>
+</div></section>
+
+<section><div class="w">
+<h2>Por que <span class="y">não é mais um</span> material de teoria</h2>
+<table class="cmp">
+<tr><th>Material comum</th><th>Teclado Sem Mistério</th></tr>
+<tr><td>Texto denso</td><td>Explicação visual, frases curtas</td></tr>
+<tr><td>Traduzido de fora</td><td>Escrito em português, com cifra brasileira</td></tr>
+<tr><td>Decorar</td><td>Entender e montar pela fórmula</td></tr>
+<tr><td>Pentagrama</td><td>Desenhado no teclado</td></tr>
+<tr><td>Sem exercícios</td><td>44 exercícios com gabarito</td></tr>
+<tr><td>Pacote de mapas soltos</td><td>Método completo + plano de 90 dias</td></tr>
+<tr><td>Extras vendidos à parte</td><td>4 bônus inclusos</td></tr>
+</table>
+<a class="btn-buy" href="LINK_DO_CHECKOUT">QUERO ENTENDER O TECLADO</a>
+</div></section>
+
+<section class="alt"><div class="w">
+<p class="kick">O que tem dentro</p>
+<h2><span class="y">11 módulos</span> em 4 partes</h2>
+<h3 class="parte">Parte 1. Pare de se sentir perdido</h3><details class="mod"><summary><span class="mn">01</span>O mapa do teclado</summary><p>Nome de cada tecla nos dois jeitos, Dó (C), Ré (D), Mi (E). Onde ficam as oitavas no seu teclado de 61 teclas. Sustenido e bemol sem confusão.</p></details><details class="mod"><summary><span class="mn">02</span>Tons e escalas</summary><p>Por que cada tom tem suas notas. A receita da escala maior e menor, para montar qualquer uma sem decorar.</p></details><details class="mod"><summary><span class="mn">03</span>Intervalos: a distância é a emoção</summary><p>Por que um acorde soa alegre, triste ou tenso. Contar distâncias no teclado em vez de adivinhar.</p></details><h3 class="parte">Parte 2. Monte, não decore</h3><details class="mod"><summary><span class="mn">04</span>Acordes pela fórmula</summary><p>Maior, menor, aumentado, diminuto. Uma fórmula vale para os 12 tons. Leitura de cifra brasileira: Am, F#m, Bb, C/E.</p></details><details class="mod"><summary><span class="mn">05</span>Sétimas e cor</summary><p>C7M, Dm7, G7, sus4 e as inversões. O que cada símbolo da cifra pede para a sua mão fazer.</p></details><details class="mod"><summary><span class="mn">06</span>Campo harmônico e graus</summary><p>O campo harmônico desenhado no teclado. Os graus (1º, 4º, 5º) e como eles mostram o próximo acorde.</p></details><h3 class="parte">Parte 3. Faça soar como música</h3><details class="mod"><summary><span class="mn">07</span>Ritmo e tempo</summary><p>Compasso, pulsação e levadas simples para não ficar só segurando acorde.</p></details><details class="mod"><summary><span class="mn">08</span>O que cada mão faz</summary><p>Mão esquerda no baixo, direita no acorde. Inversões para trocar de acorde sem pular pelo teclado.</p></details><details class="mod"><summary><span class="mn">09</span>Mudar de tom (transposição)</summary><p>Subir meio tom, descer um tom, tocar a mesma música em outra tonalidade usando os graus. Ideal para o louvor.</p></details><h3 class="parte">Parte 4. Toque como músico</h3><details class="mod"><summary><span class="mn">10</span>Primeiro passo para tocar de ouvido</summary><p>Achar o tom da música e testar os graus mais prováveis em vez de tentar tecla por tecla.</p></details><details class="mod"><summary><span class="mn">11</span>Improvisar e criar</summary><p>Usar a escala do tom para enfeitar, fazer introduções e montar suas próprias progressões.</p></details>
+</div></section>
+
+<section><div class="w">
+<h2>Folheie <span class="c">o guia</span></h2>
+<p class="mini">Arraste para o lado →</p>
+<div class="carousel"><figure class="slide"><picture><img src="img/pagina-1.jpg" width="600" height="800" alt="Mapa do teclado" class="" loading="lazy" decoding="async"></picture><figcaption>Mapa do teclado</figcaption></figure><figure class="slide"><picture><img src="img/pagina-2.jpg" width="600" height="800" alt="As 12 escalas maiores" class="" loading="lazy" decoding="async"></picture><figcaption>As 12 escalas maiores</figcaption></figure><figure class="slide"><picture><img src="img/pagina-3.jpg" width="600" height="800" alt="Graus nas 12 tonalidades" class="" loading="lazy" decoding="async"></picture><figcaption>Graus nas 12 tonalidades</figcaption></figure><figure class="slide"><picture><img src="img/pagina-4.jpg" width="600" height="800" alt="Exercício com gabarito" class="" loading="lazy" decoding="async"></picture><figcaption>Exercício com gabarito</figcaption></figure><figure class="slide"><picture><img src="img/pagina-5.jpg" width="600" height="800" alt="Folha de consulta de intervalos" class="" loading="lazy" decoding="async"></picture><figcaption>Folha de consulta de intervalos</figcaption></figure></div>
+<a class="btn-buy" href="LINK_DO_CHECKOUT">QUERO ENTENDER O TECLADO</a>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>Os <span class="y">4 bônus</span> que vêm junto</h2>
+<div class="bonus"><picture><img src="img/bonus-caderno.jpg" width="600" height="600" alt="Caderno de exercícios imprimível" class="" loading="lazy" decoding="async"></picture><div><span class="tag">Bônus 1</span><h3>Caderno de exercícios imprimível</h3><p>Os 44 exercícios em folhas para imprimir e fazer à mão, com gabarito separado para conferir.</p></div></div><div class="bonus"><picture><img src="img/bonus-etiquetas.jpg" width="600" height="600" alt="Etiquetas para as teclas" class="" loading="lazy" decoding="async"></picture><div><span class="tag">Bônus 2</span><h3>Etiquetas para as teclas</h3><p>Imprima, recorte e cole. Em poucos dias você enxerga cada nota sem precisar contar.</p></div></div><div class="bonus"><picture><img src="img/bonus-plano90.jpg" width="600" height="600" alt="Plano de prática de 90 dias" class="" loading="lazy" decoding="async"></picture><div><span class="tag">Bônus 3</span><h3>Plano de prática de 90 dias</h3><p>O que fazer em cada dia, em sessões de cerca de 12 minutos. Você nunca fica sem saber por onde seguir.</p></div></div><div class="bonus"><picture><img src="img/bonus-consulta.jpg" width="600" height="600" alt="Folhas de consulta rápida" class="" loading="lazy" decoding="async"></picture><div><span class="tag">Bônus 4</span><h3>Folhas de consulta rápida</h3><p>Escalas, campo harmônico nas 12 tonalidades, círculo de quintas e fórmulas dos acordes. Deixe do lado do teclado.</p></div></div>
+</div></section>
+
+<section><div class="w church">
+<p class="kick" style="text-align:center">Para quem toca no louvor</p>
+<h2 style="text-align:center">O ministro mudou o tom e você <span class="p">congelou</span>? Isso tem <span class="g">solução</span>.</h2>
+<p>Quem toca na igreja conhece a cena: a música sobe meio tom no meio do culto, a banda acompanha e você fica procurando onde colocar a mão.</p>
+<ul>
+<li>Você aprende a pensar em <b>graus</b> (1º, 4º, 5º), e não só em nomes de acordes.</li>
+<li>Mudar de tom vira levar o mesmo desenho para outra tecla.</li>
+<li>As folhas de consulta trazem o <b>campo harmônico nas 12 tonalidades</b>, para deixar do lado do teclado.</li>
+<li>Você entende a cifra do louvor (C7M, Dm7, G/B) em vez de copiar sem saber o que é.</li>
+</ul>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>A <span class="g">transformação</span></h2>
+<div class="tr">
+<div><s>Decora formas</s> → <b>entende de onde vem cada acorde</b></div>
+<div><s>Preso na mesma região</s> → <b>usa o teclado inteiro</b></div>
+<div><s>Testa até soar</s> → <b>escolhe o próximo acorde com intenção</b></div>
+<div><s>Procura vídeo para tudo</s> → <b>dá os primeiros passos de ouvido</b></div>
+<div><s>Se perde na teoria</s> → <b>fala a língua da música</b></div>
+<div><s>Trava com outro tom</s> → <b>toca em qualquer tonalidade</b></div>
+</div>
+</div></section>
+
+<section><div class="w">
+<h2>Não é <span class="y">só um guia</span></h2>
+<p>É um kit para você sair do lugar: o guia, o gabarito, o caderno, as etiquetas, o plano de 90 dias e as folhas de consulta.</p>
+<ul class="pack">
+<li><b>Guia Teclado Sem Mistério</b><span>cerca de 60 páginas, 11 módulos</span></li>
+<li><b>Gabarito completo</b><span>44 exercícios resolvidos</span></li>
+<li><b>Caderno de exercícios</b><span>imprimível</span></li>
+<li><b>Etiquetas para as teclas</b><span>imprimir, recortar e colar</span></li>
+<li><b>Plano de prática de 90 dias</b><span>cerca de 12 min por dia</span></li>
+<li><b>Folhas de consulta</b><span>escalas, campo harmônico, círculo de quintas, acordes</span></li>
+</ul>
+<div class="price" data-value="29.90" data-currency="BRL"><s>de R$ 147,00</s> por <b>R$ 29,90</b><small>pagamento único, no Pix ou no cartão</small></div>
+<a class="btn-buy" href="LINK_DO_CHECKOUT">QUERO ENTENDER O TECLADO</a>
+<div class="guar" style="margin-top:18px"><div class="seal">7 DIAS<br>GARANTIA</div><p style="margin:0"><b>Garantia incondicional de 7 dias.</b> Se não gostar, pede o reembolso e recebe 100% de volta. O risco é todo nosso.</p></div>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>Perguntas <span class="y">frequentes</span></h2>
+<details class="faq"><summary>Tem muita coisa de graça no YouTube. Por que comprar?</summary><p>O YouTube tem peças soltas, cada vídeo de um jeito, e você acaba voltando sempre no mesmo vídeo. O guia é a sequência na ordem certa, do mapa do teclado até a improvisação, com exercício e gabarito para você ter certeza de que entendeu. Tudo num lugar só, para consultar quando quiser.</p></details><details class="faq"><summary>Já vi pacote de mapas de teoria por R$ 10. Qual a diferença?</summary><p>Pacote de mapas é figura solta, normalmente feita para professor. Aqui é um método completo para quem toca teclado: cada página mostra a ideia, você aplica no teclado na hora e confere no gabarito. E vem com caderno de exercícios, etiquetas para as teclas, folhas de consulta e um plano de prática de 90 dias para você saber o que fazer em cada dia.</p></details><details class="faq"><summary>Sou iniciante. Serve para mim?</summary><p>Serve. O guia começa no nome de cada tecla e vem com etiquetas para você colar no teclado. Não precisa ler partitura. O foco é entender o que você toca, passo a passo. Se você quer só tocar uma música específica amanhã sem entender nada, aí uma cifra pronta resolve melhor.</p></details><details class="faq"><summary>Acho que não tenho dom nem ouvido. Vou conseguir?</summary><p>Na maioria das vezes não é falta de dom, é falta de mapa. Quando você entende campo harmônico e graus, você começa a prever os acordes. Esse é o primeiro passo para tocar de ouvido, e ele se treina.</p></details><details class="faq"><summary>Já comprei curso e larguei no meio. E agora?</summary><p>O guia é curto e direto, com plano de 90 dias em sessões de cerca de 12 minutos. O arquivo é seu para sempre: ninguém bloqueia seu acesso depois de um tempo. E se não gostar, você tem 7 dias de garantia incondicional.</p></details><details class="faq"><summary>Serve para teclado de 61 teclas?</summary><p>Sim. Tudo foi pensado para o teclado de 61 teclas, de qualquer marca. Se o seu tiver mais teclas, funciona igual.</p></details><details class="faq"><summary>Preciso saber ler partitura?</summary><p>Não. Tudo é mostrado desenhado no teclado e com cifra brasileira (C, Dm7, G7, C7M).</p></details><details class="faq"><summary>Como eu recebo?</summary><p>Logo depois da confirmação do pagamento, você recebe o acesso no seu e-mail. No Pix costuma ser na hora. Dá para abrir no celular, tablet ou computador.</p></details><details class="faq"><summary>Posso imprimir?</summary><p>Pode. O caderno de exercícios, as etiquetas das teclas, o plano de 90 dias e as folhas de consulta foram feitos para imprimir. O guia você pode ler na tela ou imprimir também.</p></details><details class="faq"><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia incondicional. Pede o reembolso pelo e-mail de suporte e recebe 100% do valor de volta, sem perguntas.</p></details>
+</div></section>
+
+<section><div class="w">
+<h2>Pare de decorar acordes. <span class="g">Comece a entender a música.</span></h2>
+<div class="price" data-value="29.90" data-currency="BRL"><s>de R$ 147,00</s> por <b>R$ 29,90</b><small>pagamento único, no Pix ou no cartão</small></div>
+<a class="btn-buy" href="LINK_DO_CHECKOUT">QUERO MEU TECLADO SEM MISTÉRIO</a>
+<p class="mini">Acesso imediato por e-mail · para sempre · garantia de 7 dias</p>
+</div></section>
+
+<footer><div class="w">
+<p>© 2026 Teclado Sem Mistério. Todos os direitos reservados.</p>
+<p>Suporte: <a href="mailto:SUPORTE_EMAIL">SUPORTE_EMAIL</a></p>
+<details><summary>Termos de Uso</summary><p>Ao comprar o guia Teclado Sem Mistério você recebe uma licença de uso pessoal e intransferível do material digital (guia, gabarito, caderno de exercícios, etiquetas, plano de 90 dias e folhas de consulta). É proibido revender, compartilhar, publicar ou distribuir o material, no todo ou em parte.</p>
+<p>O acesso é enviado ao e-mail informado na compra após a confirmação do pagamento. O comprador é responsável por informar um e-mail válido. O material é de conteúdo educativo: os resultados dependem da prática de cada pessoa e não há garantia de resultado em prazo específico.</p>
+<p>Garantia: você pode pedir o reembolso integral em até 7 dias corridos após a compra, sem precisar justificar, conforme o artigo 49 do Código de Defesa do Consumidor, pelo e-mail SUPORTE_EMAIL.</p>
+<p>Estes termos podem ser atualizados a qualquer momento. Dúvidas: SUPORTE_EMAIL.</p></details>
+<details><summary>Política de Privacidade</summary><p>Coletamos apenas os dados necessários para processar sua compra e enviar seu acesso: nome, e-mail, telefone e dados de pagamento, que são tratados pela plataforma de pagamento e não ficam armazenados por nós.</p>
+<p>Este site usa cookies e pixels de medição (como o da Meta) para entender o desempenho dos anúncios e melhorar a página. Você pode bloquear cookies nas configurações do seu navegador.</p>
+<p>Não vendemos seus dados. Eles podem ser compartilhados apenas com os serviços necessários para a venda, a entrega e a medição, conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+<p>Para acessar, corrigir ou excluir seus dados, escreva para SUPORTE_EMAIL.</p></details>
+<p style="margin-top:12px">Este site não faz parte do Facebook nem da Meta. Resultados variam de pessoa para pessoa e dependem da prática.</p>
+</div></footer>
+</body>
+</html>
